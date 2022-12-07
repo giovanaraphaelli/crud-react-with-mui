@@ -12,7 +12,6 @@ import {
 import { Box } from '@mui/system';
 import { useMatch, useNavigate, useResolvedPath } from 'react-router-dom';
 import { useDrawerContext } from '../../contexts';
-import HomeIcon from '@mui/icons-material/Home';
 import { ReactNode } from 'react';
 
 interface IDrawerProviderProps {
