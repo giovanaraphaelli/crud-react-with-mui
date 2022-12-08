@@ -9,9 +9,11 @@ import {
   useMediaQuery,
   useTheme,
 } from '@mui/material';
+import DarkModeIcon from '@mui/icons-material/DarkMode';
+import LightModeIcon from '@mui/icons-material/LightMode';
 import { Box } from '@mui/system';
 import { useMatch, useNavigate, useResolvedPath } from 'react-router-dom';
-import { useDrawerContext } from '../../contexts';
+import { useAppThemeContext, useDrawerContext } from '../../contexts';
 import { ReactNode } from 'react';
 
 interface IDrawerProviderProps {
@@ -54,6 +56,7 @@ export const MenuLateral: React.FC<IDrawerProviderProps> = ({ children }) => {
   const smDown = useMediaQuery(theme.breakpoints.down('sm'));
 
   const { isDrawerOpen, toggleDrawerOpen, drawerOptions } = useDrawerContext();
+  const { toggleTheme, themeName } = useAppThemeContext();
   return (
     <>
       <Drawer
@@ -91,6 +94,18 @@ export const MenuLateral: React.FC<IDrawerProviderProps> = ({ children }) => {
                   onClick={smDown ? toggleDrawerOpen : undefined}
                 />
               ))}
+            </List>
+          </Box>
+          <Box>
+            <List component="nav">
+              <ListItemButton onClick={toggleTheme}>
+                <ListItemIcon>
+                  {themeName === 'light' ? <DarkModeIcon /> : <LightModeIcon />}
+                </ListItemIcon>
+                <ListItemText
+                  primary={themeName === 'light' ? 'Dark Mode' : 'Light Mode'}
+                />
+              </ListItemButton>
             </List>
           </Box>
         </Box>

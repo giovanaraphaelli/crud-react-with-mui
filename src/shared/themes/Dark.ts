@@ -3,10 +3,11 @@ import { deepPurple, amber } from '@mui/material/colors';
 
 export const DarkTheme = createTheme({
   palette: {
+    mode: 'dark',
     primary: {
       main: deepPurple[700],
       dark: deepPurple[800],
-      light: deepPurple[500],
+      light: deepPurple[700],
       contrastText: deepPurple[50],
     },
     secondary: {
@@ -18,6 +19,11 @@ export const DarkTheme = createTheme({
     background: {
       default: '#121212',
       paper: '#383838',
+    },
+  },
+  typography: {
+    allVariants: {
+      color: '#ffffff',
     },
   },
 });
