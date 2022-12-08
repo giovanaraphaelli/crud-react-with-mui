@@ -12,11 +12,13 @@ import { useDrawerContext } from '../contexts';
 interface ILayoutBaseProps {
   children?: ReactNode;
   titulo: string;
+  barraDeFerramentas?: ReactNode;
 }
 
 export const LayoutBase: React.FC<ILayoutBaseProps> = ({
   children,
   titulo,
+  barraDeFerramentas,
 }) => {
   const theme = useTheme();
 
@@ -30,17 +32,26 @@ export const LayoutBase: React.FC<ILayoutBaseProps> = ({
         alignItems="center"
         gap={1}
         padding={1}
-        height={theme.spacing(12)}
+        height={theme.spacing(smDown ? 6 : 12)}
       >
         {smDown && (
           <IconButton onClick={toggleDrawerOpen}>
             <MenuIcon />
           </IconButton>
         )}
-        <Typography variant="h5">{titulo}</Typography>
+        <Typography
+          variant={smDown ? 'h5' : 'h4'}
+          whiteSpace="nowrap"
+          overflow="hidden"
+          textOverflow="ellipses"
+        >
+          {titulo}
+        </Typography>
       </Box>
-      <Box>Barra de Ferramentas</Box>
-      <Box>{children}</Box>
+      {barraDeFerramentas && <Box>{barraDeFerramentas}</Box>}
+      <Box flex={1} overflow="auto">
+        {children}
+      </Box>
     </Box>
   );
 };
