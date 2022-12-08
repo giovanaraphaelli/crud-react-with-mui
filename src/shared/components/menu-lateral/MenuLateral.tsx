@@ -8,10 +8,10 @@ import {
   ListItemText,
   useMediaQuery,
   useTheme,
+  Box,
 } from '@mui/material';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import LightModeIcon from '@mui/icons-material/LightMode';
-import { Box } from '@mui/system';
 import { useMatch, useNavigate, useResolvedPath } from 'react-router-dom';
 import { useAppThemeContext, useDrawerContext } from '../../contexts';
 import { ReactNode } from 'react';
