@@ -1,3 +1,10 @@
 {
-  "pessoas": []
+  "pessoas": [
+    {
+      "id": 1,
+      "nomeCompleto": "Giovana Raphaelli",
+      "email": "giovana@raphaelli.com",
+      "cidadeId": "São Paulo"
+    }
+  ]
 }
