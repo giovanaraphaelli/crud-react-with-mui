@@ -4,7 +4,37 @@
       "id": 1,
       "nomeCompleto": "Giovana Raphaelli",
       "email": "giovana@raphaelli.com",
-      "cidadeId": "São Paulo"
+      "cidadeId": 1
+    },
+    {
+      "id": 2,
+      "nomeCompleto": "João Silva",
+      "email": "joao@silva.com",
+      "cidadeId": 1
+    },
+    {
+      "id": 3,
+      "nomeCompleto": "Maria Souza",
+      "email": "maria@souza.com",
+      "cidadeId": 1
+    },
+    {
+      "id": 4,
+      "nomeCompleto": "Gustavo Oliveira",
+      "email": "gustavo@oliveira.com",
+      "cidadeId": 1
+    },
+    {
+      "id": 5,
+      "nomeCompleto": "Tatiana Araujo",
+      "email": "tatiana@araujo.com",
+      "cidadeId": 1
+    },
+    {
+      "id": 6,
+      "nomeCompleto": "Carlos Eduardo",
+      "email": "carlos@eduardo.com",
+      "cidadeId": 1
     }
   ]
 }
