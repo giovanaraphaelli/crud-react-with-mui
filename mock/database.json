@@ -7,12 +7,6 @@
       "cidadeId": 1
     },
     {
-      "id": 2,
-      "nomeCompleto": "João Silva",
-      "email": "joao@silva.com",
-      "cidadeId": 1
-    },
-    {
       "id": 3,
       "nomeCompleto": "Maria Souza",
       "email": "maria@souza.com",
